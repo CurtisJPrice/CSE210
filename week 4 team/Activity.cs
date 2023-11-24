@@ -13,14 +13,14 @@ internal class Activity
         Console.WriteLine($"{activityName} - {description}");
         Console.WriteLine($"Set duration: {duration} seconds");
         Console.WriteLine("Prepare to begin...");
-        Thread.Sleep(3000); // Pause for 3 seconds with a spinner animation
+        Thread.Sleep(3000); 
     }
 
     protected void ShowEndingMessage(string activityName, int elapsedTime)
     {
         Console.WriteLine("Good job!");
         Console.WriteLine($"You have completed {activityName} in {elapsedTime} seconds.");
-        Thread.Sleep(3000); // Pause for 3 seconds with a spinner animation
+        Thread.Sleep(3000); 
     }
 
     protected void ShowSpinner(int duration)
@@ -29,7 +29,7 @@ internal class Activity
         for (int i = 0; i < duration * 2; i++)
         {
             Console.Write("-");
-            Thread.Sleep(500); // Pause for 0.5 seconds
+            Thread.Sleep(500); 
             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
         }
         Console.CursorVisible = true;

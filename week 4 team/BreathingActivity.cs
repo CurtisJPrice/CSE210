@@ -7,28 +7,25 @@ internal class BreathingActivity : Activity
         for (int i = seconds; i > 0; i--)
         {
             Console.Write($"{i}, ");
-            Thread.Sleep(1000); // Pause for 1 second
+            Thread.Sleep(1000); 
         }
     }
 
     public void Start()
     {
-        // Standard starting message and prompt for duration
         ShowStartingMessage("Breathing Activity", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.");
 
         int elapsedTime = 0;
-        int breathDuration = 3; // Duration for each breath (in and out)
+        int breathDuration = 3; 
 
         while (elapsedTime < this.duration)
         {
-            // Breathe in...
             Console.Write("Breathe in... ");
             ShowCountdown(breathDuration);
             Console.WriteLine();
 
             elapsedTime += breathDuration;
 
-            // Breathe out...
             Console.Write("Breathe out... ");
             ShowCountdown(breathDuration);
             Console.WriteLine();
@@ -36,7 +33,6 @@ internal class BreathingActivity : Activity
             elapsedTime += breathDuration;
         }
 
-        // Standard ending message for all activities
         ShowEndingMessage("Breathing Activity", elapsedTime);
     }
 }

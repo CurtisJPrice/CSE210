@@ -30,8 +30,8 @@ internal class ReflectionActivity : Activity
         {
             string randomQuestion = reflectionQuestions[random.Next(reflectionQuestions.Length)];
             Console.WriteLine(randomQuestion);
-            ShowSpinner(5); // Pause for 5 seconds with a spinner animation
-            elapsedTime += 5; // Adjust the elapsed time based on the pause duration
+            ShowSpinner(5);
+            elapsedTime += 5;
         }
     }
 
@@ -44,7 +44,7 @@ internal class ReflectionActivity : Activity
         string prompt = prompts[random.Next(prompts.Length)];
 
         Console.WriteLine(prompt);
-        ShowSpinner(2); // Pause for 2 seconds with a countdown
+        ShowSpinner(2);
         elapsedTime += 2;
 
         ShowReflectionQuestions();

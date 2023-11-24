@@ -1,4 +1,3 @@
-// Listing activity class
 internal class ListingActivity : Activity
 {
     private string[] listPrompts = {
@@ -25,7 +24,7 @@ internal class ListingActivity : Activity
         for (int i = countdownDuration; i > 0; i--)
         {
             Console.Write($"{i} ");
-            Thread.Sleep(1000); // Countdown pauses for 1 second
+            Thread.Sleep(1000);
         }
 
         Console.WriteLine();
@@ -44,14 +43,14 @@ internal class ListingActivity : Activity
             string prompt = listPrompts[random.Next(listPrompts.Length)];
             Console.WriteLine(prompt);
 
-            int countdownDuration = Math.Min(10, this.duration - elapsedTime); // Ensure countdown doesn't exceed remaining time
+            int countdownDuration = Math.Min(10, this.duration - elapsedTime);
             if (countdownDuration > 0)
             {
-                ShowAdditionalQuestion(countdownDuration); // Show additional question with countdown
+                ShowAdditionalQuestion(countdownDuration);
                 elapsedTime += countdownDuration;
             }
 
-            ShowSpinner(1); // Simulate 1 second for each item
+            ShowSpinner(1);
             elapsedTime += 1;
         }
 
